@@ -23,13 +23,19 @@ These instructions will get you a copy of the project up and running on your loc
 ### Installation
 
 1. Clone the repo
-   `git clone https://github.com/ADAidan/React-Weather-App.git`
+   ```
+   git clone https://github.com/ADAidan/React-Weather-App.git
+   ```
 
 2. Navigate to the project directory
-   `cd react-weather-app`
+   ```
+   cd react-weather-app
+   ```
 
 3. Install dependencies
-   `npm install`
+   ```
+   npm install
+   ```
 
 4. Create a `.env` file in the root directory and add your OpenWeather and MapBox API keys
     ```
@@ -38,7 +44,9 @@ These instructions will get you a copy of the project up and running on your loc
     ```
 
 5. Start the development server
-`npm start`
+    ```
+    npm start
+    ```
 
 Your app should now be running on `http://localhost:3000`.
 
@@ -47,8 +55,8 @@ Your app should now be running on `http://localhost:3000`.
 - [Create React App](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app)
 - [OpenWeather API](https://openweathermap.org/api)
 - [MapBox API](https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-geocoder/)
-- [React Router DOM](https://reactrouter.com/web/guides/quick-start)
-- [Font Awesome](https://fontawesome.com/how-to-use/on-the-web/using-with/react)
+- [React Router DOM](https://reactrouter.com/en/6.15.0/start/overview)
+- [Font Awesome](https://fontawesome.com/docs/web/setup/get-started)
 
 ## Contributing
 
