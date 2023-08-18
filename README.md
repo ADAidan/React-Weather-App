@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# React Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React Weather App is a React application that provides real-time, hourly, and 8-day weather forecasts for any city across the globe. It leverages the OpenWeather API for weather data and the MapBox API for city search functionality.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Search City**: Using MapBox's SearchBox React component, users can easily find their desired city with autofill suggestions.
+- **Current Weather**: Displays the current weather condition including temperature, humidity, wind speed, and more.
+- **Hourly Forecast**: Get an hourly forecast to plan your day accordingly.
+- **8-Day Forecast**: A detailed 8-day forecast providing an overview of the weather for the upcoming week.
+- **Icon Display**: Utilizes FontAwesomeIcon React component for aesthetically pleasing and intuitive icons.
+- **Responsive Design**: Works seamlessly across different devices and browsers.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+These instructions will get you a copy of the project up and running on your local machine.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- Node.js
+- npm
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. Clone the repo
+   `git clone https://github.com/ADAidan/React-Weather-App.git`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Navigate to the project directory
+   `cd react-weather-app`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install dependencies
+   `npm install`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Create a `.env` file in the root directory and add your OpenWeather and MapBox API keys
+    ```
+    REACT_APP_OPENWEATHER_API_KEY=your_openweather_api_key
+    REACT_APP_MAPBOX_API_KEY=your_mapbox_api_key
+    ```
 
-### `npm run eject`
+5. Start the development server
+`npm start`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Your app should now be running on `http://localhost:3000`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Built With
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [Create React App](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app)
+- [OpenWeather API](https://openweathermap.org/api)
+- [MapBox API](https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-geocoder/)
+- [React Router DOM](https://reactrouter.com/web/guides/quick-start)
+- [Font Awesome](https://fontawesome.com/how-to-use/on-the-web/using-with/react)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contributing
 
-## Learn More
+If you would like to contribute to this project, please feel free to fork the repository, create a feature branch, and send me a pull request.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
