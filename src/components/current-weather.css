@@ -1,0 +1,30 @@
+.current-box h1, .current-box p {
+    margin: .5rem;
+    display: block;
+}
+
+.current-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.current-box {
+    background: linear-gradient(to bottom right, #FFFFFF, #F0F0F0, #75b5f9);
+    border-radius: 1rem;
+    color: #800020;
+    padding: 1rem;
+    width: 80%;
+    margin-top: 4rem;
+    box-shadow: #75b5f9 5px 5px 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.current-box h1, .current-box .temp {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.current-box .temp {
+    text-align: left;
+}

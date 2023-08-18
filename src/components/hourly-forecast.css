@@ -1,0 +1,13 @@
+@media (max-width: 400px) {
+    .hourly-container {
+        width: 100% !important;
+    }
+}
+
+.hourly-container {
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    width: 85%;
+    color: #800020;
+    font-family: 'Roboto', sans-serif;
+}
