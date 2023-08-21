@@ -17,7 +17,7 @@ function App({ forecast, setForecast, city, setCity }) {
   const [units, setUnits] = useState(['°F', 'mph', 'in', 'mi']);
   const [currentTemp, setCurrentTemp] = useState('');
 
-  const API_KEY = '939beccf07e77217c881917dfe80d7d1';
+  const API_KEY = process.env.REACT_APP_API_KEY;
   const API = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates[0]}&lon=${coordinates[1]}&units=imperial&appid=${API_KEY}`;
 
   useEffect(() => {

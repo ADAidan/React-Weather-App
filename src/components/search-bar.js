@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { SearchBox } from '@mapbox/search-js-react';
 import { useNavigate } from 'react-router-dom';
 
-const ACCESS_TOKEN = 'pk.eyJ1IjoiYWlkYW4tZHllciIsImEiOiJjbGp3aTd2b2cwM2d0M3FvN3lidmI5ZGRtIn0.mbPURfBS3RgwKupoxNHRXg';
+const ACCESS_TOKEN = process.env.REACT_APP_ACCESS_TOKEN;
 
 export function SearchBar({setCity, setCoordinates}) {
     const [value, setValue] = useState('');
