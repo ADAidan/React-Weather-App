@@ -9,7 +9,6 @@ export function SearchBar({setCity, setCoordinates}) {
     const navigate = useNavigate();
 
     const handleRetrieve = (result) => {
-        console.log(result);
         if (!result.features || result.features.length === 0) return;
       
         const firstFeature = result.features[0];
@@ -21,8 +20,6 @@ export function SearchBar({setCity, setCoordinates}) {
         const roundedLongitude = Math.round(longitude * 100) / 100;
       
         setCoordinates([roundedLatitude, roundedLongitude]);
-        console.log(result);
-        console.log(`Latitude: ${roundedLatitude}, Longitude: ${roundedLongitude}`);
         setCity(city);
     };
 

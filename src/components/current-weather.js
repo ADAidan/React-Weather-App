@@ -11,7 +11,7 @@ function CurrentWeather({current, city}) {
         description = description.charAt(0).toUpperCase() + description.slice(1);
     }
     catch(err) {
-        console.log(err)
+        console.log('failed to load data');
     };
 
     return(

@@ -26,13 +26,9 @@ function App({ forecast, setForecast, city, setCity }) {
     fetch(API)
       .then((response) => response.json())
       .then((forecast) => {
-        console.log(forecast);
         setForecast(forecast);
-        console.log(API)
-        console.log(forecast)
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
         setForecast('');
       });
   }, [API, coordinates.length, setForecast])
