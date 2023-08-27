@@ -10,22 +10,16 @@ export function SearchBar({setCity, setCoordinates}) {
 
     const handleRetrieve = (result) => {
         console.log(result);
-        // If there are no features, we don't do anything
         if (!result.features || result.features.length === 0) return;
       
-        // Get the first feature from the features array
         const firstFeature = result.features[0];
       
-        // Extract the longitude and latitude
         const [longitude, latitude] = firstFeature.geometry.coordinates;
         const city = firstFeature.properties.name;
       
-        // Round to 2 decimal places
         const roundedLatitude = Math.round(latitude * 100) / 100;
         const roundedLongitude = Math.round(longitude * 100) / 100;
       
-        // You can then use these coordinates for your needs
-        // For example, we'll just log them here
         setCoordinates([roundedLatitude, roundedLongitude]);
         console.log(result);
         console.log(`Latitude: ${roundedLatitude}, Longitude: ${roundedLongitude}`);

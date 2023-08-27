@@ -3,7 +3,7 @@ import './forecast.css'
 
 function Forecast({ days }) {
     return(
-        <div className={'daily-forecast-container'}>
+        <div className='daily-forecast-container'>
           {days.map((day, index) => (
             <div key={day.dt}>
             <Day dailyWeather={day} index={index} />

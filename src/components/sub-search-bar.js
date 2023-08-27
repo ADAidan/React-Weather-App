@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function SubSearchBar({setCity}) {
+function SubSearchBar() {
     const [cityInput, setCityInput] = useState('');
 
     return(

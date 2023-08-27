@@ -15,7 +15,7 @@ function CurrentWeather({current, city}) {
     };
 
     return(
-        <div className={'current-container'}>
+        <div className='current-container'>
             { current ? 
             <div className={'current-box'}>
                 <h1>{description} in {city}</h1>

@@ -1,12 +1,4 @@
-import { useState } from 'react';
-import { BeatLoader } from 'react-spinners';
-import SearchBar from './search-bar';
-import NavBar from './navbar';
-import SubNavbar from './sub-navbar';
-import CurrentWeather from './current-weather';
-import Forecast from './forecast';
-
-function HomePage({ city, forecast, units, setCity, setCoordinates }) {
+function HomePage() {
 
     return (
         <div style={{
@@ -20,10 +12,3 @@ function HomePage({ city, forecast, units, setCity, setCoordinates }) {
 }
 
 export default HomePage;
-
-/* <input className={"form-control"} 
-    type="text" placeholder="Search..." 
-    onChange={e => setInput(e.target.value)} value={Input}
-    style={{
-        width: '60%', height: '10%', alignItems: 'center'
-}}/> */
