@@ -24,7 +24,6 @@ export function SearchBar({setCity, setCoordinates}) {
     };
 
     const handleClear = () => {
-        console.log('cleared search');
         localStorage.removeItem('city');
         localStorage.removeItem('coordinates');
         setCity('');
