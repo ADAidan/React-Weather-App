@@ -52,11 +52,14 @@
 }
 
 .daily-box {
-    background-color: #FFFFFF;
     border: 1px solid #CCCCCC;
     padding-left: 1rem;
     padding-right: 1rem;
     height: 3.5rem;
+}
+
+.main-background {
+    background-color: #FFF;
 }
 
 .expanded {

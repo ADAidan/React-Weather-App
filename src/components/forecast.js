@@ -48,6 +48,7 @@ function Forecast({ forecast }) {
             setSelectedDay={setSelectedDay}
             windowWidth={windowWidth}
             setWindowWidth={setWindowWidth}
+            className='main-background'
           />
         ))}
       </div>

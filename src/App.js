@@ -35,10 +35,9 @@ function App({ forecast, setForecast, city, setCity }) {
   }, [API, coordinates.length, setForecast])
 
   return(
-    <div style={{
-      height: document.innerHeight, minHeight: window.innerHeight, 
-      backgroundColor: '#f6f6db'
-    }}>
+    <div /* style={{
+      height: document.innerHeight, minHeight: window.innerHeight
+    }} */>
       { forecast ? 
       <Navbar setCity={setCity} city={city} currentTemp={Math.round(forecast.current.temp) + '°F'} setCoordinates={setCoordinates}/> : 
       <Navbar setCity={setCity} setCoordinates={setCoordinates}/> }

@@ -19,7 +19,7 @@ const Router = () => {
             path: '/',
             element: <App forecast={forecast} setForecast={setForecast} city={city} setCity={setCity}/>,
             children: [
-                { index: true, element: <CurrentWeather current={forecast.current} city={city}/> },
+                { index: true, element: <CurrentWeather current={forecast.current} dailyForecast={forecast.daily} city={city}/> },
                 { path: 'hourly', element: <HourlyForecast hourly={forecast.hourly}/> },
                 { path: 'daily', element: <Forecast forecast={forecast.daily}/> },
             ],
