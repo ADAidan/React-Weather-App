@@ -7,6 +7,21 @@
     }
 }
 
+@media (min-width: 1000px) {
+    :root .daily-box {
+        height: 10rem;
+        padding: 0;
+    }
+    :root .daily-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    :root .weather-icon {
+        height: 100px;
+        width: 100px;
+    }
+}
+
 @media (max-width: 768px) {
     .daily-wrapper {
         grid-template-columns: 1.1fr .8fr 2.5fr !important;

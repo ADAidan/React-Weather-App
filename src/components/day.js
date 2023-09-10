@@ -1,20 +1,30 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { formatTimeOfDay, formatDay, formatDayOfWeek, formatWindDirection } from '../utils.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWind, faDroplet, faSun, faMoon, faSnowflake } from '@fortawesome/free-solid-svg-icons';
 import './day.css';
 
-function Day({dailyWeather}) {
+function Day({dailyWeather, index, setSelectedDay, windowWidth, setWindowWidth}) {
     const [isExpanded, setExpanded] = useState(false);
 
     const toggleExpanded = () => {
-        setExpanded(!isExpanded);
+        if (windowWidth > 1000) {
+            setSelectedDay(index);
+        } else {
+            setExpanded(!isExpanded);
+        }
     }
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
             toggleExpanded();
         }
     }
+
+    useEffect(() => {
+        const handleResize = () => setWindowWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     return(
         <div className={`daily-box ${isExpanded ? 'expanded' : ''}`}>
@@ -27,10 +37,13 @@ function Day({dailyWeather}) {
                 </div>
                 <div className='description-container'>
                     <img className='weather-icon' src={`http://openweathermap.org/img/wn/${dailyWeather.weather[0].icon}.png`} alt="weather icon"></img>
-                    <p className=''>{dailyWeather.weather[0].description}</p>
+                    { windowWidth < 1000 &&
+                    <p className=''>{dailyWeather.weather[0].description}</p> }
                 </div>
-                <p><FontAwesomeIcon icon={faDroplet} />{Math.round(dailyWeather.pop * 100)}%</p>
-                <p><FontAwesomeIcon icon={faWind}/>{formatWindDirection(dailyWeather.wind_deg)} {Math.round(dailyWeather.wind_speed)} mph</p>
+                { windowWidth < 1000 &&
+                <p><FontAwesomeIcon icon={faDroplet} />{Math.round(dailyWeather.pop * 100)}%</p> }
+                { windowWidth < 1000 &&
+                <p><FontAwesomeIcon icon={faWind}/>{formatWindDirection(dailyWeather.wind_deg)} {Math.round(dailyWeather.wind_speed)} mph</p> }
             </div>
             { isExpanded && 
             <div className='more-info-daily'>

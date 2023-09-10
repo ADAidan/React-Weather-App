@@ -21,7 +21,7 @@ const Router = () => {
             children: [
                 { index: true, element: <CurrentWeather current={forecast.current} city={city}/> },
                 { path: 'hourly', element: <HourlyForecast hourly={forecast.hourly}/> },
-                { path: 'daily', element: <Forecast days={forecast.daily}/> },
+                { path: 'daily', element: <Forecast forecast={forecast.daily}/> },
             ],
             errorElement: <ErrorPage />,
         },

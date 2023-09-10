@@ -27,6 +27,7 @@ function App({ forecast, setForecast, city, setCity }) {
       .then((response) => response.json())
       .then((forecast) => {
         setForecast(forecast);
+        console.log(forecast);
       })
       .catch(() => {
         setForecast('');
