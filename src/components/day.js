@@ -36,7 +36,9 @@ function Day({dailyWeather, index, setSelectedDay, windowWidth, setWindowWidth, 
                     <p className='low'>{Math.round(dailyWeather.temp.min)}°</p>
                 </div>
                 <div className='description-container'>
-                    <img className='weather-icon' src={`http://openweathermap.org/img/wn/${dailyWeather.weather[0].icon}.png`} alt="weather icon"></img>
+                    <img className={ windowWidth < 1000 ? 
+                        'small-weather-icon' : 
+                        'medium-weather-icon' } src={`http://openweathermap.org/img/wn/${dailyWeather.weather[0].icon}.png`} alt="weather icon"></img>
                     { windowWidth < 1000 &&
                     <p className=''>{dailyWeather.weather[0].description}</p> }
                 </div>

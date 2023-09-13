@@ -5,6 +5,7 @@ import ErrorPage from './ErrorPage';
 import CurrentWeather from './components/current-weather.js';
 import HourlyForecast from './components/hourly-forecast.js';
 import Forecast from './components/forecast.js';
+import './App.css'
 
 
 const Router = () => {

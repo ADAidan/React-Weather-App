@@ -42,6 +42,7 @@
         background: linear-gradient(155deg, #D8E9FE, #75b5f9, #F0F0F0, #FFFFFF);
         color: #800020;
         border-radius: 1rem;
+        box-shadow: #75b5f9 -5px -5px 10px;
     }
     .current-container .daily-boxes .daily-box {
         border: none;

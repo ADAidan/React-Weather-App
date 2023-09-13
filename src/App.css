@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.small-weather-icon {
+  height: 50px;
+  width: 50px;
+}
+
+.medium-weather-icon {
+  height: 100px;
+  width: 100px;
+}
+
+.large-weather-icon {
+  height: 150px;
+  width: 150px;
+}
