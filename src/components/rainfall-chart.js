@@ -48,6 +48,13 @@ const RainfallChart = ({ data }) => {
           label: 'max temperature (°F)',
           data: data.map(row => row.maxTemperature),
           yAxisID: 'y-axis-2',
+        },
+        {
+          id: 3,
+          type: 'line',
+          label: 'min temperature (°F)',
+          data: data.map(row => row.minTemperature),
+          yAxisID: 'y-axis-2',
         }
       ],
     };
