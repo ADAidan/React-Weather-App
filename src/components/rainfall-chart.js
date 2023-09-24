@@ -9,7 +9,6 @@ Chart.defaults.color = '#800020'
 
 const RainfallChart = ({ data }) => {
   const [chartData, setChartData] = useState(null);
-  const [chartOptions, setChartOptions] = useState(null);
   const chartRef = useRef(null);
 
   const options = {
@@ -63,17 +62,13 @@ const RainfallChart = ({ data }) => {
       chartRef.current.destroy();
     }
   }, [data]);
-
-  useEffect(() => {
-    setChartOptions(options);
-  }, [options]);
   
   return (
     <div className='rainfall-chart-container'>
       { chartData && 
       <Bar 
       data={chartData}
-      options={chartOptions}
+      options={options}
       ref={chartRef.current}
       /> }
     </div>
