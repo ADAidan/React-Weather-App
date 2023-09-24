@@ -57,7 +57,7 @@ function CurrentWeather({current, dailyForecast, city}) {
                 <h1 className='current-description'>{description} in {city}</h1>
                 <div className='main-current-info'>
                     <p className='temp'>{Math.round(current.temp)}°F</p>
-                    <img className='large-weather-icon' src={`http://openweathermap.org/img/wn/${current.weather[0].icon}.png`} alt="weather icon"></img>
+                    <img className='large-weather-icon' src={`https://openweathermap.org/img/wn/${current.weather[0].icon}.png`} alt="weather icon"></img>
                 </div>
                 <div className='more-current-info'>
                     <p>Feels like {Math.round(current.feels_like)}°F</p>

@@ -38,7 +38,7 @@ function Day({dailyWeather, index, setSelectedDay, windowWidth, setWindowWidth, 
                 <div className='description-container'>
                     <img className={ windowWidth < 1000 ? 
                         'small-weather-icon' : 
-                        'medium-weather-icon' } src={`http://openweathermap.org/img/wn/${dailyWeather.weather[0].icon}.png`} alt="weather icon"></img>
+                        'medium-weather-icon' } src={`https://openweathermap.org/img/wn/${dailyWeather.weather[0].icon}.png`} alt="weather icon"></img>
                     { windowWidth < 1000 &&
                     <p className=''>{dailyWeather.weather[0].description}</p> }
                 </div>
