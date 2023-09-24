@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { formatTimeOfDay, formatDay, formatDayOfWeek, formatWindDirection } from '../utils.js';
+import { formatTimeOfDay, formatWindDirection } from '../utils.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWind, faDroplet, faSun, faMoon, faSnowflake } from '@fortawesome/free-solid-svg-icons';
 import Day from './day.js';

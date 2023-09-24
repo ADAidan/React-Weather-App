@@ -24,7 +24,7 @@ function Day({dailyWeather, index, setSelectedDay, windowWidth, setWindowWidth, 
         const handleResize = () => setWindowWidth(window.innerWidth);
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    });
 
     return(
         <div className={`daily-box ${className} ${isExpanded ? 'expanded' : ''}`}>

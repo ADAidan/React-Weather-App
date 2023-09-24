@@ -65,16 +65,15 @@ const RainfallChart = ({ data }) => {
   }, [data]);
 
   useEffect(() => {
-    
     setChartOptions(options);
-  }, [data]);    
+  }, [options]);
   
   return (
     <div className='rainfall-chart-container'>
       { chartData && 
       <Bar 
       data={chartData}
-      options={options}
+      options={chartOptions}
       ref={chartRef.current}
       /> }
     </div>
