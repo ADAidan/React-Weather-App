@@ -22,7 +22,7 @@ function Hour({hourlyWeather}) {
                 <h4>{formatHour(hourlyWeather.dt)}</h4>
                 <h4>{Math.round(hourlyWeather.temp)}°F</h4>
                 <div className='description-container'>
-                    <img className='weather-icon' src={`http://openweathermap.org/img/wn/${hourlyWeather.weather[0].icon}.png`} alt="weather icon"></img>
+                    <img className='small-weather-icon' src={`https://openweathermap.org/img/wn/${hourlyWeather.weather[0].icon}.png`} alt="weather icon"></img>
                     <p className=''>{hourlyWeather.weather[0].description}</p>
                 </div>
                 <p><FontAwesomeIcon icon={faDroplet} />{Math.round(hourlyWeather.pop * 100)}%</p>
