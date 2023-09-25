@@ -49,6 +49,7 @@ function Forecast({ forecast }) {
             windowWidth={windowWidth}
             setWindowWidth={setWindowWidth}
             className='main-background'
+            clickable
           />
         ))}
       </div>

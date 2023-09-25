@@ -4,16 +4,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWind, faDroplet, faSun, faMoon, faSnowflake } from '@fortawesome/free-solid-svg-icons';
 import './day.css';
 
-function Day({dailyWeather, index, setSelectedDay, windowWidth, setWindowWidth, className}) {
+function Day({dailyWeather, index, setSelectedDay, windowWidth, setWindowWidth, className, clickable}) {
     const [isExpanded, setExpanded] = useState(false);
 
     const toggleExpanded = () => {
-        if (windowWidth > 1000) {
+        if (windowWidth > 1000 && clickable) {
             setSelectedDay(index);
-        } else {
+        }
+        if (windowWidth < 1000 && clickable) {
             setExpanded(!isExpanded);
         }
     }
+
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
             toggleExpanded();
@@ -27,8 +29,9 @@ function Day({dailyWeather, index, setSelectedDay, windowWidth, setWindowWidth, 
     });
 
     return(
-        <div className={`daily-box ${className} ${isExpanded ? 'expanded' : ''}`}>
-            <div className='daily-wrapper' onClick={toggleExpanded} onKeyDown={handleKeyDown} tabIndex={0}>
+        <div className={`daily-box ${className} ${isExpanded && 'expanded'}`}>
+            <div className={`daily-wrapper ${clickable && 'clickable'}`} 
+            onClick={toggleExpanded} onKeyDown={handleKeyDown} tabIndex={0}>
                 <h4 className='time'>{formatDayOfWeek(dailyWeather.dt)} {formatDay(dailyWeather.dt)}</h4>
                 <div className='temp-container'>
                     <p className='high'>{Math.round(dailyWeather.temp.max)}°</p>
